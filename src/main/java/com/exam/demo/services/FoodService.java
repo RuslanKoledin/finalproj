@@ -11,6 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 public class FoodService {
     FoodRepo foodRepo;
+
     public Food getById(Long id) {
         return foodRepo.findById(id).get();
     }

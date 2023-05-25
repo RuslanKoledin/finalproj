@@ -7,6 +7,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import com.exam.demo.services.FoodCategoryService;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
@@ -28,4 +31,9 @@ public class FoodCategoryController {
     void deleteFoodCategory(@PathVariable Long id){
         foodCategoryService.deleteFoodCategoryById(id);
     }
+    @PutMapping("/foodCategory/update")
+    FoodCategory updateById(@RequestBody FoodCategory foodCategory){
+        return foodCategoryService.updateById(foodCategory);
+    }
+
 }

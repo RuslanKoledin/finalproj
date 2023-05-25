@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import com.exam.demo.services.FoodService;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
@@ -35,4 +38,5 @@ public class FoodController {
     Food updateFoodById(@RequestBody Food food) {
         return foodService.updateById(food);
     }
+
 }
