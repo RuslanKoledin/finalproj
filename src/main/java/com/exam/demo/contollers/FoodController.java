@@ -1,16 +1,23 @@
 package com.exam.demo.contollers;
 
+<<<<<<< HEAD
 import com.exam.demo.entities.Food;
 import com.exam.demo.services.FoodService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+=======
+import com.exam.demo.services.FoodService;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.RestController;
+>>>>>>> origin/main
 
 @RestController
 @AllArgsConstructor
 public class FoodController {
     FoodService foodService;
+<<<<<<< HEAD
     @GetMapping("/food/{id}")
     Food getById(@PathVariable Long id) {
         return foodService.getById(id);
@@ -35,4 +42,6 @@ public class FoodController {
     Food updateFoodById(@RequestBody Food food) {
         return foodService.updateById(food);
     }
+=======
+>>>>>>> origin/main
 }

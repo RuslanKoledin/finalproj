@@ -6,11 +6,15 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import com.exam.demo.services.ToppingService;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
 public class ToppingController {
     ToppingService toppingService;
+
     @GetMapping("/topping/{id}")
     Topping getById(@PathVariable Long id){
         return toppingService.getById(id);
